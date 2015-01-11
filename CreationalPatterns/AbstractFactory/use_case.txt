@@ -1,0 +1,33 @@
+
+A payment processor can be defined to create transactions.
+The transactions must be treated in an abstract manner.
+There must be support for integrating with several payment processors.
+Operations that the various transactions can perform must adhere to
+a specific set of supported operations.
+
+PaymentProcessor
+    Transaction createTransaction();
+
+Transaction
+    void settle();
+    void refund();
+    void deny();
+
+PaymentProcessorFactory
+    PaymentProcessor factory.getCurrentProcessor()
+
+AuthNet : PaymentProcessor
+PayPal : PaymentProcessor
+
+AuthNetTransaction : Transaction
+PayPalTransaction :Transaction
+
+PaymentProcessorFactory
+
+CommerceService
+    CreateAndSettleTransaction(PaymentProcessorFactory factory)
+    {
+        PaymentProcessor processor = factory.getCurrentProcessor()
+        Transaction transaction = processor.createTransaction()
+        transaction.settle();
+    }

@@ -1,0 +1,54 @@
+
+===============================================================================
+                   Creational Pattern - Abstract Factory
+===============================================================================
+
+       _______ ______  _______________________ _______ ________________
+      (  ___  |  ___ \(  ____ \__   __(  ____ |  ___  |  ____ \__   __/
+      | (   ) | (   ) ) (    \/  ) (  | (    )| (   ) | (    \/  ) (
+      | (___) | (__/ /| (_____   | |  | (____)| (___) | |        | |
+      |  ___  |  __ ( (_____  )  | |  |     __)  ___  | |        | |
+      | (   ) | (  \ \      ) |  | |  | (\ (  | (   ) | |        | |
+      | )   ( | )___) )\____) |  | |  | ) \ \_| )   ( | (____/\  | |
+      |/ ____\|/ \___/\_______)__)_(__|/___\__// ____\(_______/  )_(
+         (  ____ (  ___  |  ____ \__   __(  ___  |  ____ )\     /|
+         | (    \/ (   ) | (    \/  ) (  | (   ) | (    )( \   / )
+         | (__   | (___) | |        | |  | |   | | (____)|\ (_) /
+         |  __)  |  ___  | |        | |  | |   | |     __) \   /
+         | (     | (   ) | |        | |  | |   | | (\ (     ) (
+         | )     | )   ( | (____/\  | |  | (___) | ) \ \__  | |
+         |/      |/     \(_______/  )_(  (_______)/   \__/  \_/
+
+
+===============================================================================
+
+Definition
+
+    Provide an interface for creating families of related or dependent objects
+    without specifying their concrete classes.
+
+    A factory produces the instances to act upon. By abstracting the factory
+    methods which produce the instances we eliminate dependency on specific
+    implementations that product specific instances.
+
+    A class that defines the used instances is abstracted as well so that there
+    is no dependency on how they are produced nor how they operate.
+
+    The pattern basically removes dependency on any implementation class by
+    abstracting how the classes are instantiated as well as how they operate.
+
+Participant Classes
+
+    AbstractFactory
+        Declares an interface for operations that create abstract products.
+    ConcreteFactory
+        Implements the operations to create concrete product objects.
+    AbstractProduct
+        Declares an interface for a type of product object.
+    Product
+        Defines a product object to be created by the corresponding concrete
+        factory.
+    Client
+        Uses interfaces declared by AbstractFactory and AbstractProduct
+        classes.
+
