@@ -1,0 +1,43 @@
+
+===============================================================================
+                       Creational Pattern - Builder
+===============================================================================
+
+           ______         __________       ______  _______ _______
+          (  ___ \|\     /\__   __( \     (  __  \(  ____ (  ____ )
+          | (   ) ) )   ( |  ) (  | (     | (  \  ) (    \/ (    )|
+          | (__/ /| |   | |  | |  | |     | |   ) | (__   | (____)|
+          |  __ ( | |   | |  | |  | |     | |   | |  __)  |     __)
+          | (  \ \| |   | |  | |  | |     | |   ) | (     | (\ (
+          | )___) ) (___) |__) (__| (____/\ (__/  ) (____/\ ) \ \__
+          |/ \___/(_______)_______(_______(______/(_______//   \__/
+
+
+===============================================================================
+
+Definition
+
+    Separate the construction of a complex object from its representation so
+    that the same construction process can create different representations.
+
+Participant Classes
+
+    Builder
+        Specifies an absract interface for creating parts of a product object.
+        Example: VehicleBuilder
+    ConcreteBuilder
+        Constructs and assembles parts of the product by implementing the
+        Builder interface.
+        Defines and keeps track of the representation it creates.
+        Provides an interface for retrieving the product.
+        Example: CarBuilder, BikeBuilder, BoatBuilder
+    Director
+        Constructs an object using the Builder interface.
+        Example: Shop
+    Product
+        Represents the complex object under construction.
+        ConcreteBuilder builds the product's internal representation and
+        defines the process by which it is assembled.
+        Includes classes that define the constituent parts, includes interfaces
+        for assembling the parts into the final result.
+
