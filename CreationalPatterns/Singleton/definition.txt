@@ -35,8 +35,10 @@ Problem
         - Access to the resource will be requested from multiple, disparate
           parts of the system.
         - There can be only one object.
-        * Data should flow into the Singletone only to reduce serious
-          dependencies between the business logic and the singleton.
+
+    Data should only flow into the Singleton to reduce serious dependencies
+    between the business logic and the singleton. In this way a Singleton
+    can be wisely used.
 
 Participant Classes
 
@@ -44,5 +46,5 @@ Participant Classes
         - Defines an Instance operation that lets clients access its unique
           instance. Instance is a class operation.
         - Responsible for creating and maintaining its own unique instance.
-        - Example: Logger, Configuration, Session
+        - Example: Logger, Configuration, Session, Debugger
 
