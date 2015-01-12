@@ -1,0 +1,40 @@
+
+===============================================================================
+                     Creational Pattern - Prototype
+===============================================================================
+
+    _______ _______ ________________________________        _______ _______
+   (  ____ |  ____ |  ___  )__   __(  ___  )__   __/\     /(  ____ |  ____ \
+   | (    )| (    )| (   ) |  ) (  | (   ) |  ) (  ( \   / ) (    )| (    \/
+   | (____)| (____)| |   | |  | |  | |   | |  | |   \ (_) /| (____)| (__
+   |  _____)     __) |   | |  | |  | |   | |  | |    \   / |  _____)  __)
+   | (     | (\ (  | |   | |  | |  | |   | |  | |     ) (  | (     | (
+   | )     | ) \ \_| (___) |  | |  | (___) |  | |     | |  | )     | (____/\
+   |/      |/   \__(_______)  )_(  (_______)  )_(     \_/  |/      (_______/
+
+
+===============================================================================
+
+Definition
+
+    Specify the kind of objects to create using a prototypical instance, and
+    create new objects by copying this prototype.
+
+Problem
+
+    We can define a set of specific instances that are commonly used and then
+    allow users to clone the instances without dealing with the overhead of
+    building them on their own.
+
+Participant Classes
+
+    Prototype
+        - Declares an interface for cloning itself.
+        - Example: ColorPrototype
+    ConcretePrototype
+        - Implements an operation for cloning itself
+        - Example: Color
+    Client
+        - Creates a new object by asking a prototype to clone itself.
+        - Example: ColorManager
+
