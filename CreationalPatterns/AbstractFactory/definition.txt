@@ -37,18 +37,45 @@ Definition
     The pattern basically removes dependency on any implementation class by
     abstracting how the classes are instantiated as well as how they operate.
 
+Problem
+
+    An Abstract Factory pattern allows us to overcome platform dependence
+    by hiding all 'new' operators for their products.
+
+    For instance, a stamping machine could stamp multiple car products like the
+    hood, doors, and bumpers. Each of these products could have different
+    models that make them unique, but still can be stamped by the stamping
+    machine in their own way.
+
+    The abstract factory object is responsible for defining the methods which
+    create the products. Each product is abstracted and the abstraction defines
+    their required operation.
+
+    So the stamping machine is a client that needs three part to stamps: hood,
+    doors and bumpers. A hood is an abstract class that has an operation
+    stamp(). Multiple models that extend the hood class define how they should
+    be stamped. Same for each part.
+
+    An implementation for specific model factories extend the abstract factory
+    so an example would be ModelZ1000Factory. This produces the ModelZ1000
+    parts. The StampingMachine then simply calls stamp on the parts and they
+    are stamped correctly.
+
+    Then the stamping machine client never creates the parts, and never defines
+    how they interact.
+
 Participant Classes
 
     AbstractFactory
-        Declares an interface for operations that create abstract products.
+        - Declares an interface for operations that create abstract products.
     ConcreteFactory
-        Implements the operations to create concrete product objects.
+        - Implements the operations to create concrete product objects.
     AbstractProduct
-        Declares an interface for a type of product object.
+        - Declares an interface for a type of product object.
     Product
-        Defines a product object to be created by the corresponding concrete
-        factory.
+        - Defines a product object to be created by the corresponding concrete
+          factory.
     Client
-        Uses interfaces declared by AbstractFactory and AbstractProduct
-        classes.
+        - Uses interfaces declared by AbstractFactory and AbstractProduct
+          classes.
 
