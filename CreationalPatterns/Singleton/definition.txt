@@ -1,0 +1,48 @@
+
+===============================================================================
+                     Creational Pattern - Singleton
+===============================================================================
+
+   _________________       _______ _       _______________________ _
+  (  ____ \__   __( (    /(  ____ ( \     (  ____ \__   __(  ___  | (    /|
+  | (    \/  ) (  |  \  ( | (    \/ (     | (    \/  ) (  | (   ) |  \  ( |
+  | (_____   | |  |   \ | | |     | |     | (__      | |  | |   | |   \ | |
+  (_____  )  | |  | (\ \) | | ____| |     |  __)     | |  | |   | | (\ \) |
+        ) |  | |  | | \   | | \_  ) |     | (        | |  | |   | | | \   |
+  /\____) |__) (__| )  \  | (___) | (____/\ (____/\  | |  | (___) | )  \  |
+  \_______)_______//    )_|_______|_______(_______/  )_(  (_______)/    )_)
+
+
+===============================================================================
+
+Definition
+
+    Ensure a class has only one instance and provide a global point of access
+    to it.
+
+Problem
+
+    When we have a single set of operations that must be accessible by many
+    portions of the software we can use a singleton to access that data
+    statically from anywhere.
+
+    There is danger in this pattern in that you are creating dependency on
+    a singleton across a variety business models. The singleton then must
+    always be created before the business models can be used.
+
+    The singleton must fulfill the following rules:
+        - Controls concurrent access to a shared resource.
+        - Access to the resource will be requested from multiple, disparate
+          parts of the system.
+        - There can be only one object.
+        * Data should flow into the Singletone only to reduce serious
+          dependencies between the business logic and the singleton.
+
+Participant Classes
+
+    Singleton
+        - Defines an Instance operation that lets clients access its unique
+          instance. Instance is a class operation.
+        - Responsible for creating and maintaining its own unique instance.
+        - Example: Logger, Configuration, Session
+
