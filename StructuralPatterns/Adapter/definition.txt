@@ -1,0 +1,51 @@
+
+===============================================================================
+                      Structural Pattern - Adapter
+===============================================================================
+
+            _______ ______  _______ _______________________ _______
+           (  ___  |  __  \(  ___  |  ____ )__   __(  ____ (  ____ )
+           | (   ) | (  \  ) (   ) | (    )|  ) (  | (    \/ (    )|
+           | (___) | |   ) | (___) | (____)|  | |  | (__   | (____)|
+           |  ___  | |   | |  ___  |  _____)  | |  |  __)  |     __)
+           | (   ) | |   ) | (   ) | (        | |  | (     | (\ (
+           | )   ( | (__/  ) )   ( | )        | |  | (____/\ ) \ \__
+           |/     \(______/|/     \|/         )_(  (_______//   \__/
+
+
+===============================================================================
+
+Definition
+
+    Adapter is about creating an intermediary abstraction that translates, or
+    maps, the old component to the new system.
+
+    Clients call methods on the Adapter object which redirects them into calls
+    to the legacy component.
+
+    An Adapter functions as a wrapper or modifier of an existing class. It
+    provides a different or translated view of that class.
+
+Checklist
+
+    1. Identify the players: the component(s) that want to be accommodated
+        (i.e. the client), and the component that needs to adapt (i.e. the
+        adaptee).
+    2. Identify the interface that the client requires.
+    3. Design a "wrapper" class that can "impedance match" the adaptee to the client.
+    4. The adapter/wrapper class "has a" instance of the adaptee class.
+    5. The adapter/wrapper class "maps" the client interface to the adaptee interface.
+    6. The client uses (is coupled to) the new interface
+
+Rules of Thumb
+
+    Adapter makes things work after they're designed; Bridge makes them work
+    before they are.
+    Bridge is designed up-front to let the abstraction and the implementation
+    vary independently. Adapter is retrofitted to make unrelated classes work
+    together.
+    Remember that Adapter makes two existing interfaces work together as
+    opposed to defining an entirely new one.
+
+Participant Classes
+
